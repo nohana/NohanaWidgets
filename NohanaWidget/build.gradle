@@ -43,7 +43,7 @@ uploadArchives {
             repository url: "file://${repos.absolutePath}"
             pom.version = '1.0.0'
             pom.groupId = 'jp.co.nohana'
-            pom.artifactId = 'core.widget'
+            pom.artifactId = 'NohanaWidget'
         }
     }
 }
