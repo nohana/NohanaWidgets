@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.7.+'
+    }
+}
+apply plugin: 'android-library'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://raw.github.com/nohana/Amalgam/master/amalgam/repository/' } // TODO replace maven central repo in the future
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+    release {
+        runProguard false
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+    }
+}
+
+dependencies {
+    compile 'com.amalgam:Amalgam:0.2.4'
+}
+
+def repos = new File(rootDir, "repository")
+
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${repos.absolutePath}"
+            pom.version = '1.0.0'
+            pom.groupId = 'jp.co.nohana'
+            pom.artifactId = 'core.widget'
+        }
+    }
+}

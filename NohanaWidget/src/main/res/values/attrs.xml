@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IconCenterizedRadioButton">
+        <attr name="text" format="string|reference"/>
+        <attr name="textSize" format="dimension|reference"/>
+        <attr name="textColor" format="color|reference"/>
+        <attr name="iconDrawable" format="reference"/>
+        <attr name="iconDrawablePadding" format="dimension|reference"/>
+    </declare-styleable>
+    <declare-styleable name="CompoundImageView">
+        <attr name="checked" format="boolean|reference"/>
+    </declare-styleable>
+    <declare-styleable name="PageDots">
+        <attr name="count" format="integer|reference"/>
+        <attr name="selectedDotIndex" format="integer|reference"/>
+        <attr name="dotRadius" format="dimension|reference"/>
+        <attr name="dotMargin" format="dimension|reference"/>
+        <attr name="dotColor" format="color|reference"/>
+        <attr name="dotSelectedColor" format="color|reference"/>
+    </declare-styleable>
+    <declare-styleable name="TransformableFrameLayout">
+        <attr name="defaultScale" format="float|reference"/>
+        <attr name="maxScale" format="float|reference"/>
+        <attr name="minScale" format="float|reference"/>
+    </declare-styleable>
+    <declare-styleable name="WizardStepGroup">
+        <attr name="firstStepPosition" format="integer|reference"/>
+    </declare-styleable>
+</resources>
